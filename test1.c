@@ -77,6 +77,14 @@ static int dev_release(struct inode *inod, struct file *fil) {
     return 0;
 }
 
+// The unlocked_ioctl implementation
+static long my_driver_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
+{
+
+    return 0; // Success
+}
+
+
 // Bind file operation system calls to our driver functions
 static struct file_operations fops = {
     .owner = THIS_MODULE,
@@ -84,6 +92,7 @@ static struct file_operations fops = {
     .read = dev_read,
     .write = dev_write,
     .release = dev_release,
+    .unlocked_ioctl = my_driver_ioctl,
 };
 
 
