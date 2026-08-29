@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Kernel Dev");
-MODULE_DESCRIPTION("A character device driver that creates a /dev/ file automatically");
+MODULE_DESCRIPTION("This is a Template !!");
 
 
 #define DEVICE_NAME "my_char_dev"
